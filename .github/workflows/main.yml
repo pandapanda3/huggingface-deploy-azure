@@ -7,7 +7,7 @@ env:
 # When this action will be executed
 on:
   # Automatically trigger it when detected changes in repo. Remove comments to enable
-  #push:
+  push:
     branches:
       [ main ]
 
