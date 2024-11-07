@@ -47,6 +47,10 @@ jobs:
     needs: build
 
     steps:
+      - name: Debug Environment Variables
+        run: |
+          echo "AZURE_CONTAINER_APP_NAME: $AZURE_CONTAINER_APP_NAME"
+          echo "AZURE_GROUP_NAME: $AZURE_GROUP_NAME"
       - name: Azure Login
         uses: azure/login@v1
         with:

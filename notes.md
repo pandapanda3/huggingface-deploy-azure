@@ -41,3 +41,10 @@ az containerapp create \
 # To get the PAT
 The access token will need to be added as an Action secret. Create one with enough permissions to write to packages:  
 [Create a new token with write access to packages](https://github.com/settings/tokens/new?description=Azure+Container+Apps+access&scopes=write:packages)
+
+#  list container apps in the resource group and see the Azure Container App name:
+```
+az containerapp list --resource-group ${{ env.AZURE_GROUP_NAME }} --query "[].name" -o table
+```
+
+ ${{ env.AZURE_GROUP_NAME }}: resource group name
