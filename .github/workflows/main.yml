@@ -8,8 +8,8 @@ env:
 on:
   # Automatically trigger it when detected changes in repo. Remove comments to enable
   #push:
-    branches:
-      [ main ]
+  #  branches:
+  #    [ main ]
 
   # Allow mannually trigger
   workflow_dispatch:
@@ -63,7 +63,6 @@ jobs:
 #            az containerapp registry set -n ${{ env.AZURE_CONTAINER_APP_NAME }} -g ${{ env.AZURE_GROUP_NAME }} --server ghcr.io --username  ${{ github.actor }} --password ${{ secrets.PAT }}
 #            az containerapp update -n demo-container -g demo-container --cpu 2 --memory 4Gi
 #            az containerapp update -n ${{ env.AZURE_CONTAINER_APP_NAME }} -g ${{ env.AZURE_GROUP_NAME }} --image ghcr.io/${{ env.REPO }}:${{ github.sha }}
-
 
 
 
