@@ -50,3 +50,14 @@ az containerapp list --resource-group ${{ env.AZURE_GROUP_NAME }} --query "[].na
 ```
 
  ${{ env.AZURE_GROUP_NAME }}: resource group name
+ 
+ # Deactivate by Updating App Configuration
+ ```
+az containerapp update -n azure-container-app-demo -g demo-ml --min-replicas 0
+```
+
+#  Use Azure CLI to Check Replica Status
+```
+az containerapp revision list -g demo-ml -n azure-container-app-demo --query "[].{Name:name, Replicas:properties.replicaCount, Status:properties.status}" -o table
+
+```

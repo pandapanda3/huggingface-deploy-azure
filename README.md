@@ -68,3 +68,11 @@ Note that it is a good practice to use `404 Not Found` to protect from requests 
 | GET | POST | PUT | HEAD|
 |---|---|---|---|
 | Read Only | Write Only | Update existing | Does it exist? |
+
+# WorkFlow
+- Pull the latest code, build the image, and push it to [GitHub Container Registry (GHCR)](https://github.com/pandapanda3/huggingface-deploy-azure/pkgs/container/huggingface-deploy-azure)
+
+- Enable automatic installation of Azure CLI extensions, configure Azure Container Apps to use GitHub Container Registry (GHCR), update the CPU & memory of the Azure container app, and allow Azure to pull and use the latest Docker image.
+
+- Check the details in the [Container App](https://portal.azure.com/#@peggypandayeah.onmicrosoft.com/resource/subscriptions/04c1b27c-fcd8-43ba-96a2-cfe04a58d0a5/resourceGroups/demo-ml/providers/Microsoft.App/containerApps/azure-container-app-demo/containers). The **"Image and tag"** should match the latest image displayed in the [GitHub Container Registry (GHCR)](https://github.com/pandapanda3/huggingface-deploy-azure/pkgs/container/huggingface-deploy-azure).
+
